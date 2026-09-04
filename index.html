@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Manual oficial de FaroLive para propietarios, administradores, staff y streamers.">
+  <meta name="theme-color" content="#071526">
+  <title>Manual de FaroLive</title>
+  <link rel="icon" href="assets/branding/favicon-normal.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="manual.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="site-header">
+    <a class="brand" href="#inicio"><img src="assets/branding/avatar-normal.webp" alt=""><span>Faro<b>Live</b><small>Manual oficial</small></span></a>
+    <nav aria-label="Enlaces del proyecto">
+      <a href="https://panel.farolive.xyz">Abrir FaroLive</a>
+      <a href="https://panel.farolive.xyz/profiles">Perfiles</a>
+      <button type="button" data-print>Imprimir / PDF</button>
+    </nav>
+  </header>
+
+  <div class="manual-layout">
+    <aside class="sidebar" aria-label="Índice del manual">
+      <label class="search"><span>Buscar en el manual</span><input type="search" placeholder="Ej. agregar streamer" autocomplete="off" data-search></label>
+      <p class="search-status" data-search-status aria-live="polite"></p>
+      <nav>
+        <a href="#inicio">Introducción</a>
+        <a href="#roles">Roles y accesos</a>
+        <a href="#instalar">Agregar FaroLive</a>
+        <a href="#primeros-pasos">Primeros pasos</a>
+        <a href="#streamers">Streamers y plantillas</a>
+        <a href="#plataformas">Plataformas</a>
+        <a href="#filtrado">Filtrado avanzado</a>
+        <a href="#anuncios">Mensajes y menciones</a>
+        <a href="#tiktok">Comandos de TikTok</a>
+        <a href="#perfiles">Perfiles públicos</a>
+        <a href="#staff">Staff y moderación</a>
+        <a href="#metricas">Métricas</a>
+        <a href="#festividades">Festividades</a>
+        <a href="#privacidad">Privacidad y seguridad</a>
+        <a href="#problemas">Solución de problemas</a>
+        <a href="#faq">Preguntas frecuentes</a>
+      </nav>
+    </aside>
+
+    <main id="contenido">
+      <section id="inicio" class="hero manual-section" data-searchable>
+        <div><p class="eyebrow">DOCUMENTACIÓN PÚBLICA</p><h1>Todo lo necesario para usar <span>FaroLive</span></h1><p class="lead">Configura anuncios de directos, administra streamers y crea perfiles públicos desde un panel conectado con Discord.</p><div class="hero-actions"><a class="primary" href="#primeros-pasos">Comenzar</a><a href="#problemas">Resolver un problema</a></div></div>
+        <img src="assets/branding/avatar-normal.webp" alt="Emblema de FaroLive">
+      </section>
+
+      <section class="callout manual-section" data-searchable>
+        <strong>¿Para quién es este manual?</strong>
+        <p>Para propietarios y administradores de servidores, personal autorizado de FaroLive y streamers vinculados. No es una guía para instalar copias del producto ni contiene código, credenciales o detalles de la infraestructura privada.</p>
+      </section>
+
+      <section id="roles" class="manual-section" data-searchable>
+        <p class="eyebrow">01 · ACCESO</p><h2>Roles y responsabilidades</h2>
+        <div class="card-grid">
+          <article><h3>Propietario del servidor</h3><p>Configura canales y seguridad, delega roles, administra streamers y puede retirar registros.</p></article>
+          <article><h3>Administrador delegado</h3><p>Gestiona las áreas permitidas por los roles que el propietario seleccionó en FaroLive.</p></article>
+          <article><h3>Streamer vinculado</h3><p>Personaliza sus mensajes, consulta sus registros y crea o edita su perfil público.</p></article>
+          <article><h3>Staff global</h3><p>Accede al panel global según su función: soporte, moderación o superadministración.</p></article>
+        </div>
+        <div class="note"><strong>Importante:</strong> iniciar sesión con Discord no concede permisos por sí solo. FaroLive comprueba el servidor, la propiedad y los roles actuales antes de mostrar cada acción.</div>
+      </section>
+
+      <section id="instalar" class="manual-section" data-searchable>
+        <p class="eyebrow">02 · INSTALACIÓN</p><h2>Agregar FaroLive a Discord</h2>
+        <ol class="steps">
+          <li><span>1</span><div><h3>Abre el panel</h3><p>Entra en <a href="https://panel.farolive.xyz">panel.farolive.xyz</a> y selecciona <b>Agregar FaroLive a un servidor</b>.</p></div></li>
+          <li><span>2</span><div><h3>Elige la comunidad</h3><p>Discord sólo mostrará servidores donde tengas autorización para instalar aplicaciones.</p></div></li>
+          <li><span>3</span><div><h3>Revisa los permisos</h3><p>Autoriza únicamente los permisos solicitados. FaroLive no necesita el permiso Administrador.</p></div></li>
+          <li><span>4</span><div><h3>Vuelve al panel</h3><p>Inicia sesión con Discord. Si la comunidad todavía no aparece, utiliza la opción de recargar servidores.</p></div></li>
+        </ol>
+      </section>
+
+      <section id="primeros-pasos" class="manual-section" data-searchable>
+        <p class="eyebrow">03 · CONFIGURACIÓN</p><h2>Preparar una comunidad</h2>
+        <ol class="checklist">
+          <li>Selecciona el servidor en <b>Comunidades</b>.</li>
+          <li>Define el canal para anuncios de directos.</li>
+          <li>Define, si lo deseas, otro canal para videos nuevos.</li>
+          <li>Asigna roles con control total, gestión de streamers y permiso para TikTok.</li>
+          <li>Guarda la configuración antes de registrar creadores.</li>
+          <li>Comprueba que FaroLive pueda ver el canal y enviar mensajes, enlaces e imágenes.</li>
+        </ol>
+        <div class="note warning"><strong>Evita permisos excesivos.</strong> No asignes Administrador al bot para solucionar un canal mal configurado; revisa los permisos específicos del canal.</div>
+      </section>
+
+      <section id="streamers" class="manual-section" data-searchable>
+        <p class="eyebrow">04 · CREADORES</p><h2>Streamers y plantillas</h2>
+        <p>Un streamer puede participar en varias comunidades y tener cuentas en varias plataformas. Cada registro de servidor conserva su mensaje, mención y reglas de filtrado.</p>
+        <h3>Registrar una cuenta automática</h3>
+        <ol class="steps compact">
+          <li><span>1</span><div><p>Escribe el nombre visible y, preferentemente, vincula su usuario de Discord mediante ID o mención.</p></div></li>
+          <li><span>2</span><div><p>Selecciona Twitch, YouTube o Kick y pega el enlace principal del canal.</p></div></li>
+          <li><span>3</span><div><p>Personaliza el mensaje o deja el campo vacío para usar el texto predeterminado.</p></div></li>
+          <li><span>4</span><div><p>Configura mención, rol durante el directo y filtrado de contenido si la comunidad lo necesita.</p></div></li>
+          <li><span>5</span><div><p>Revisa la vista previa y confirma el guardado.</p></div></li>
+        </ol>
+        <h3>Identidad de Discord</h3>
+        <p>La lista muestra avatar, nombre, usuario e ID de Discord cuando están disponibles. Esto ayuda a distinguir cuentas similares antes de editar o dar de baja un registro.</p>
+        <div class="note"><strong>Cuenta repetida:</strong> si un canal ya está vinculado a otra persona, no lo asignes de nuevo. Corrige primero el registro propietario; una cuenta de plataforma no debe representar a dos identidades diferentes.</div>
+      </section>
+
+      <section id="plataformas" class="manual-section" data-searchable>
+        <p class="eyebrow">05 · DETECCIÓN</p><h2>Cómo funciona cada plataforma</h2>
+        <div class="platform-table" role="table" aria-label="Funciones por plataforma">
+          <div role="row" class="table-head"><span>Plataforma</span><span>Inicio</span><span>Final</span><span>Videos</span></div>
+          <div role="row"><b>Twitch</b><span>Automático</span><span>Automático</span><span>No activado</span></div>
+          <div role="row"><b>YouTube</b><span>Automático</span><span>Automático</span><span>Opcional</span></div>
+          <div role="row"><b>Kick</b><span>Automático</span><span>Automático</span><span>No disponible</span></div>
+          <div role="row"><b>TikTok</b><span>Comando</span><span>Comando</span><span>Comando</span></div>
+        </div>
+        <p>Los anuncios automáticos se publican una sola vez por transmisión y se actualizan al finalizar. La detección usa integraciones oficiales cuando la plataforma las permite, con comprobaciones de respaldo para conservar continuidad.</p>
+        <h3>YouTube: videos nuevos</h3><p>El propietario puede activar publicaciones nuevas. La primera sincronización registra el contenido existente sin anunciarlo; después sólo se publican elementos nuevos.</p>
+      </section>
+
+      <section id="filtrado" class="manual-section" data-searchable>
+        <p class="eyebrow">06 · ENRUTAMIENTO</p><h2>Filtrado avanzado por comunidad</h2>
+        <p>Por defecto, la comunidad recibe todos los directos del streamer. Activa el filtrado cuando el servidor sólo permita contenido relacionado con su propia comunidad o proyecto.</p>
+        <h3>Hashtag oficial</h3>
+        <p>Escribe el hashtag solicitado a los streamers. FaroLive normaliza mayúsculas, acentos, espacios, guiones y equivalencias comunes como <code>Ø</code>/<code>O</code>. La tolerancia flexible admite pequeñas variaciones, pero evita aceptar títulos sin relación.</p>
+        <h3>Reglas opcionales</h3>
+        <ul><li><b>Categorías permitidas:</b> limita por la categoría detectada en la plataforma.</li><li><b>Palabras requeridas:</b> exige términos adicionales en el título.</li><li><b>Palabras excluidas:</b> bloquea títulos con términos incompatibles.</li><li><b>Coincidencia adicional:</b> decide si deben cumplirse todas o alguna de las reglas.</li></ul>
+        <p>Los campos permanecen ocultos mientras el filtrado está desactivado. Usa el probador incluido antes de guardar para comprobar títulos reales.</p>
+      </section>
+
+      <section id="anuncios" class="manual-section" data-searchable>
+        <p class="eyebrow">07 · MENSAJES</p><h2>Mensajes, menciones y emojis</h2>
+        <ul>
+          <li>El mensaje personalizado es opcional; vacío significa usar el predeterminado de FaroLive.</li>
+          <li>Las menciones disponibles son ninguna, <code>@everyone</code>, <code>@here</code> o un rol autorizado.</li>
+          <li>FaroLive evita repetir la mención cuando edita un anuncio finalizado.</li>
+          <li>Se admiten emojis Unicode, propios de FaroLive y emojis de servidores accesibles para el bot.</li>
+          <li>La vista previa permite comprobar contenido y presentación antes de guardar.</li>
+        </ul>
+        <div class="note"><strong>Consejo:</strong> utiliza menciones masivas sólo cuando la comunidad las haya aceptado. Un mensaje breve con un botón claro suele funcionar mejor.</div>
+      </section>
+
+      <section id="tiktok" class="manual-section" data-searchable>
+        <p class="eyebrow">08 · TIKTOK</p><h2>Flujo manual desde Discord</h2>
+        <p>TikTok se administra mediante comandos guiados porque la detección pública de directos no ofrece el mismo flujo estable que las otras plataformas.</p>
+        <div class="command"><code>/live tiktok</code><span>Prepara y publica el anuncio LIVE del usuario autorizado.</span></div>
+        <div class="command"><code>/live finalizar</code><span>Marca el LIVE seleccionado como finalizado.</span></div>
+        <div class="command"><code>/video tiktok</code><span>Publica un video mediante su enlace y metadatos públicos disponibles.</span></div>
+        <p>El servidor debe crear previamente una plantilla vinculada al usuario de Discord y autorizar su rol. FaroLive ofrece vista previa y recordatorios privados para reducir anuncios olvidados.</p>
+      </section>
+
+      <section id="perfiles" class="manual-section" data-searchable>
+        <p class="eyebrow">09 · IDENTIDAD</p><h2>Perfiles públicos</h2>
+        <p>Un usuario elegible puede abrir <b>Crear o editar mi perfil</b> desde su panel. La misma identidad se conserva aunque participe en varias comunidades.</p>
+        <div class="card-grid">
+          <article><h3>Contenido</h3><p>Nombre, usuario, biografía, avatar, banner y conexiones sociales.</p></article>
+          <article><h3>Diseño</h3><p>Paletas, iconos y efectos disponibles según el tipo de perfil.</p></article>
+          <article><h3>Actividad</h3><p>Estado en vivo o fuera de línea, plataformas activas, vistas y horas detectadas.</p></article>
+          <article><h3>Compartir</h3><p>Enlace, código QR y tarjeta social adaptada para Discord, X y WhatsApp.</p></article>
+        </div>
+        <h3>Directorio</h3><p>La portada destaca hasta diez perfiles de creadores por vistas. El staff aparece en una sección independiente y no participa en la clasificación. La biblioteca completa incluye búsqueda progresiva.</p>
+        <h3>Estados del perfil</h3><ul><li><b>Borrador:</b> no es público.</li><li><b>Publicado:</b> visible en el directorio.</li><li><b>Oculto o suspendido:</b> retirado por moderación.</li></ul>
+      </section>
+
+      <section id="staff" class="manual-section" data-searchable>
+        <p class="eyebrow">10 · EQUIPO</p><h2>Staff global y moderación</h2>
+        <p>El panel global está separado de la administración de servidores. El acceso depende del ID autorizado por FaroLive.</p>
+        <ul><li><b>Soporte:</b> consulta información necesaria para ayudar.</li><li><b>Moderación:</b> revisa, oculta, suspende, restaura o elimina perfiles dentro de su alcance.</li><li><b>Superadministración:</b> administra al equipo, protege la identidad principal y controla funciones exclusivas.</li></ul>
+        <p>Un perfil sólo puede restaurarse si su propietario vuelve a ser streamer activo o staff. Al retirar staff, su identidad premium se elimina; si continúa como creador, el perfil se adapta al nivel de creador.</p>
+        <h3>Presencia de Discord</h3><p>Los perfiles oficiales pueden mostrar estado, actividad, disponibilidad y última conexión cuando Discord proporciona esos datos y los permisos lo permiten.</p>
+      </section>
+
+      <section id="metricas" class="manual-section" data-searchable>
+        <p class="eyebrow">11 · OBSERVABILIDAD</p><h2>Métricas y auditoría</h2>
+        <p>El panel global reúne actividad del sitio, vistas y clics de perfiles, accesos, registros, estados de moderación, transmisiones detectadas y horas emitidas.</p>
+        <ul><li>Las horas se cuentan por transmisión real, no se multiplican por el número de servidores que recibieron el anuncio.</li><li>La clasificación pública incluye sólo creadores.</li><li>Las acciones administrativas importantes generan registros de auditoría.</li><li>Las estadísticas mensuales se separan de los datos operativos necesarios para evitar afectar anuncios o perfiles.</li></ul>
+      </section>
+
+      <section id="festividades" class="manual-section" data-searchable>
+        <p class="eyebrow">12 · TEMPORADAS</p><h2>Identidad automática por festividad</h2>
+        <p>La web adapta avatar, banner, favicon y acentos visuales a temporadas relevantes para Latinoamérica y Estados Unidos. Fuera de esas fechas utiliza la identidad normal.</p>
+        <div class="season-grid"><figure><img src="assets/branding/avatar-normal.webp" alt=""><figcaption>Normal</figcaption></figure><figure><img src="assets/branding/avatar-halloween.webp" alt=""><figcaption>Halloween</figcaption></figure><figure><img src="assets/branding/avatar-navidad.webp" alt=""><figcaption>Navidad</figcaption></figure><figure><img src="assets/branding/avatar-ano-nuevo.webp" alt=""><figcaption>Año Nuevo</figcaption></figure><figure><img src="assets/branding/avatar-san-valentin.webp" alt=""><figcaption>San Valentín</figcaption></figure></div>
+        <p>Discord no permite que la web cambie libremente todos los recursos públicos del bot. Por ello el panel global muestra un aviso al responsable para aplicar o retirar la identidad correspondiente.</p>
+      </section>
+
+      <section id="privacidad" class="manual-section" data-searchable>
+        <p class="eyebrow">13 · CONFIANZA</p><h2>Privacidad y seguridad</h2>
+        <ul><li>Usa siempre el dominio oficial <code>panel.farolive.xyz</code>.</li><li>Nunca entregues tokens, contraseñas o códigos de respaldo a otra persona.</li><li>FaroLive no ofrece una consola web ni acceso remoto a Ubuntu.</li><li>Los archivos de perfil se validan por contenido y tienen límites de tamaño.</li><li>Las métricas públicas son agregadas; no almacenan IP ni agente de usuario del visitante.</li><li>Los enlaces externos se validan y se abren de forma aislada.</li></ul>
+        <p>Consulta las <a href="https://panel.farolive.xyz/terms">Condiciones del Servicio</a> y la <a href="https://panel.farolive.xyz/privacy">Política de Privacidad</a>.</p>
+      </section>
+
+      <section id="problemas" class="manual-section" data-searchable>
+        <p class="eyebrow">14 · AYUDA</p><h2>Solución de problemas</h2>
+        <details><summary>Mi servidor no aparece</summary><p>Comprueba que iniciaste sesión con la cuenta correcta, que conservas el rol autorizado y que FaroLive sigue en el servidor. Después usa la opción para recargar servidores.</p></details>
+        <details><summary>No puedo administrar streamers</summary><p>El propietario debe incluir uno de tus roles actuales en “control total” o “agregar y editar streamers”. Si el rol cambió, cierra sesión, vuelve a entrar y recarga los permisos.</p></details>
+        <details><summary>El directo no se anunció</summary><p>Confirma que el registro esté activo, la URL corresponda al canal correcto, el bot pueda escribir en el canal y el filtrado acepte el título. Si es YouTube, verifica que sea un directo público.</p></details>
+        <details><summary>El filtrado rechazó un título válido</summary><p>Prueba el título en el panel. Reduce la tolerancia sólo para coincidencias muy precisas; revisa categorías, palabras requeridas y excluidas antes de guardar.</p></details>
+        <details><summary>El perfil no puede publicarse o restaurarse</summary><p>La cuenta debe conservar al menos un vínculo activo como streamer o pertenecer al staff global. La moderación no puede omitir esta condición.</p></details>
+        <details><summary>Un menú se cierra o queda fuera de la pantalla</summary><p>Actualiza la página sin caché. Si continúa, anota dispositivo, navegador, sección y opción exacta antes de contactar soporte.</p></details>
+      </section>
+
+      <section id="faq" class="manual-section" data-searchable>
+        <p class="eyebrow">15 · FAQ</p><h2>Preguntas frecuentes</h2>
+        <details><summary>¿FaroLive necesita permiso Administrador?</summary><p>No. Debe utilizar permisos limitados para ver canales, enviar mensajes, insertar enlaces y usar los recursos necesarios.</p></details>
+        <details><summary>¿Un streamer puede estar en varios servidores?</summary><p>Sí. Cada comunidad conserva su configuración y puede decidir si recibe todos sus directos o sólo contenido que cumpla sus reglas.</p></details>
+        <details><summary>¿Se puede anunciar en varias plataformas?</summary><p>Sí. Twitch, YouTube y Kick se monitorizan como cuentas independientes. TikTok utiliza un flujo manual guiado.</p></details>
+        <details><summary>¿Por qué TikTok no es automático?</summary><p>El flujo disponible no ofrece la misma detección pública y estable que las integraciones automáticas. FaroLive prioriza un proceso controlado para evitar falsos anuncios.</p></details>
+        <details><summary>¿El código de FaroLive es público?</summary><p>No. Este manual y el escaparate son públicos, pero el producto, su historial, infraestructura y documentación operativa permanecen privados.</p></details>
+      </section>
+
+      <footer><img src="assets/branding/favicon-normal.png" alt=""><div><strong>FaroLive</strong><p>Tu directo. Nuestra señal.</p></div><nav><a href="https://panel.farolive.xyz/terms">Condiciones</a><a href="https://panel.farolive.xyz/privacy">Privacidad</a></nav></footer>
+    </main>
+  </div>
+</body>
+</html>
