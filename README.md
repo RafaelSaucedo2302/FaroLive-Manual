@@ -4,6 +4,12 @@
 
 Manual público para propietarios, administradores, staff y streamers que utilizan FaroLive.
 
+![Directorio público de FaroLive](assets/screenshots/02-directorio.png)
+
+El manual incluye capturas obtenidas de una ejecución local aislada con usuarios, servidores, estadísticas y transmisiones completamente ficticios.
+
+![Sección visual del manual de FaroLive](assets/manual-preview.png)
+
 **Sitio del manual:** <https://rafaelsaucedo2302.github.io/FaroLive-Manual/>
 
 ## Publicación con GitHub Pages
